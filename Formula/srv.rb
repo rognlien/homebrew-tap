@@ -3,15 +3,25 @@ class Srv < Formula
   homepage "https://github.com/rognlien/srv"
   license "MIT"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/rognlien/srv/releases/download/v0.3.3/srv-v0.3.3-macos-arm64.tar.gz"
-    sha256 "99683af44b3f46f92e8e1e38c317b8f5e34565ada69822143d0a36f3c8845560"
-  else
-    url "https://github.com/rognlien/srv/releases/download/v0.3.3/srv-v0.3.3-macos-x86_64.tar.gz"
-    sha256 "7fa47078516139e93fecefe2a952d72676dced90ca6e0fdc10a7b69c49138e06"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/rognlien/srv/releases/download/v0.4.0/srv-v0.4.0-macos-arm64.tar.gz"
+      sha256 "e0de9aaaf0024c664d3aa00f9c2302408db717c5767ec10b4426c712944240a5"
+    else
+      url "https://github.com/rognlien/srv/releases/download/v0.4.0/srv-v0.4.0-macos-x86_64.tar.gz"
+      sha256 "79b1caf42b196573bedf5c8841ee7976cd7b2586158445bd5908cf9d2319ca95"
+    end
   end
 
-  depends_on :macos
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/rognlien/srv/releases/download/v0.4.0/srv-v0.4.0-linux-arm64.tar.gz"
+      sha256 "0cf221da994abb66846d6b9acb34c05a288de2a51beaf5ae09f6118184f1eb08"
+    else
+      url "https://github.com/rognlien/srv/releases/download/v0.4.0/srv-v0.4.0-linux-x86_64.tar.gz"
+      sha256 "a9178a30003d9d3547549c2e8d3bce2181824a9d5a353ea98fea3c3a7d9cdc3b"
+    end
+  end
 
   def install
     bin.install "srv"
