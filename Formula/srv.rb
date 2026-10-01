@@ -5,21 +5,21 @@ class Srv < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rognlien/srv/releases/download/v0.6.0/srv-v0.6.0-aarch64-apple-darwin.tar.gz"
-      sha256 "cf4f8cc7f7576c535efcdbc197cdd7183956497bccb0685dcd59c893a614fd06"
+      url "https://github.com/rognlien/srv/releases/download/v0.7.0/srv-v0.7.0-aarch64-apple-darwin.tar.gz"
+      sha256 "ba2cd995c9357301469fab7e60e5bb7ae8491d31d191c7e8457189f345ba11da"
     else
-      url "https://github.com/rognlien/srv/releases/download/v0.6.0/srv-v0.6.0-x86_64-apple-darwin.tar.gz"
-      sha256 "84d491bac551b6f75d9b30d965763c2be3a75b13087756b1e650a864d0d1d670"
+      url "https://github.com/rognlien/srv/releases/download/v0.7.0/srv-v0.7.0-x86_64-apple-darwin.tar.gz"
+      sha256 "cf69e8edbba0b20fedb33d421547716e98eef32c4a3bcbd9d74516ff6d68ae79"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/rognlien/srv/releases/download/v0.6.0/srv-v0.6.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "77dab111123d75c85b78a6be27e914970b92a5acfc617be31abdc88d32cfcbac"
+      url "https://github.com/rognlien/srv/releases/download/v0.7.0/srv-v0.7.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2f2caddf5c8c16f95c00c3a5158e7589f97e8a709a6a14025fe370ff04525fa3"
     else
-      url "https://github.com/rognlien/srv/releases/download/v0.6.0/srv-v0.6.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a601e161db0c7187b124de0d6968f1de91f7ca355f023adf0226280b0fd6489d"
+      url "https://github.com/rognlien/srv/releases/download/v0.7.0/srv-v0.7.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "83c73d78797e102cdda88caa9b26469d00a9802ab54e15104d941fb04c87616a"
     end
   end
 
